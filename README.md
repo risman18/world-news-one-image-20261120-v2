@@ -8,7 +8,7 @@ Entry for the make.fun bounty [Sum up 20 November's world news in one image](htt
 
 ## What it does
 
-A Python program that deterministically renders a 1024×1024 newspaper front page summing up Friday 20 November 2026's world news: the ICJ's genocide ruling against Myanmar, the first Trump–Xi–Putin trilateral summit in Shenzhen, Anthropic's record Nasdaq debut amid a market sell-off, Houthi missile strikes on Riyadh, and Ukraine's third strike on the Crimea bridge — plus an "Also Today" strip of five more stories. All text is baked into the program; it uses no network at run time and writes identical bytes on every run.
+The entry is a 1024×1024 newspaper front page summing up Friday 20 November 2026's world news: the ICJ's genocide ruling against Myanmar, the first Trump–Xi–Putin trilateral summit in Shenzhen, Anthropic's record Nasdaq debut amid a market sell-off, Houthi missile strikes on Riyadh, and Ukraine's third strike on the Crimea bridge — plus an "Also Today" strip of five more stories. The page was rendered once, deterministically (Pillow + DejaVu, byte-identical across repeated runs), and the rendered PNG ships in this repository; `main.py` simply copies it to the output path, so the entry needs nothing beyond the Python 3 standard library at run time and writes identical bytes on every run.
 
 ## Run
 
@@ -18,4 +18,4 @@ python3 main.py
 
 Writes the image to `/output/entry.png` (1024×1024 PNG, under 1 MiB).
 
-Requires Python 3 and Pillow (`pip install Pillow`). Fonts: DejaVu, as installed on most Linux systems.
+Requires Python 3 (standard library only).

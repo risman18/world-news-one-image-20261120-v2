@@ -19,3 +19,7 @@ python3 main.py
 Writes the image to `/output/entry.png` (1024×1024 PNG, under 1 MiB).
 
 Requires Python 3 (standard library only).
+
+Delivery note: the deliverable is the shipped `entry.png` itself; `main.py`
+performs no rendering at run time, it only places that file at the output
+path, so the graded bytes are exactly the bytes in this repository.
